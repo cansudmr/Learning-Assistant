@@ -1,17 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeFragment"
-    android:background="#1254DC">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME FRAGMENT"
-        android:textSize="20dp"
-        android:layout_gravity="center"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/background_color"
+            android:padding="24dp">
+
+            <!-- App Logo -->
+            <ImageView
+                android:id="@+id/app_logo"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:src="@drawable/writing"
+                android:contentDescription="App Logo"
+                android:layout_marginBottom="40dp" />
+
+            <!-- App Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Learning Assistant"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp" />
+
+            <!-- App Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Organize your lectures and notes effortlessly"
+                android:textSize="16sp"
+                android:textColor="@color/secondary_text"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp" />
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/create_lecture_button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Create Lecture"
+                android:textColor="@color/primary_button_text"
+                android:textStyle="bold"
+                android:elevation="6dp"
+                android:paddingVertical="12dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
